@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6b873fe-2654-49a0-bfcb-1dc699f9d4ad" name="Changes" comment="">
+    <list default="true" id="a6b873fe-2654-49a0-bfcb-1dc699f9d4ad" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/tarjeta/Tarjeta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laboratory/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/laboratory/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laboratory/Usuarios/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/Usuarios/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laboratory/Usuarios/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/Usuarios/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laboratory/Utilidades/Tiempo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/Utilidades/Tiempo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,15 +30,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/CURSOS/Codigo/Practicas/Practica_Spring/marcelo",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CURSOS/Codigo/Practicas/Practica_java/CajeroFacuV2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.laboratory.Usuarios" />
@@ -57,7 +53,19 @@
       <option name="presentableId" value="Default" />
       <updated>1685397301995</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update">
+      <created>1685646031700</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685646031700</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -46,8 +46,7 @@ public class Menu {
                     verLista();
                     System.out.println("Ingrese el cliente al que desea entrar");
                     clienteSeleccionado=sc.nextInt();
-                    if (clienteSeleccionado>0 && op<=listaClientes.size()){
-                        menuCliente(listaClientes.get(clienteSeleccionado));
+                    if (clienteSeleccionado>=0 && clienteSeleccionado<=listaClientes.size()){
                         for (Cliente clientes:listaClientes) {
                             if (clientes.getIdCliente()==clienteSeleccionado){
                                 menuCliente(listaClientes.get(clienteSeleccionado));
@@ -73,7 +72,7 @@ public class Menu {
     public void verLista(){
         if (Cliente.getCantidadCliente()!=0){
             for (Cliente clientes:listaClientes) {
-                System.out.println("El id del cliente" +clientes.getNombreCompleto()+
+                System.out.println("El id del cliente " +clientes.getNombreCompleto()+
                         " es: "+clientes.getIdCliente());
             }
         }else{
