@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-    static ArrayList<Cliente> listaClientes=new ArrayList<>();
+    public static ArrayList<Cliente> listaClientes=new ArrayList<>();
     boolean validador=true;
     int op;
     int clienteSeleccionado;
@@ -20,9 +20,8 @@ public class Menu {
             System.out.println("""
                     Selecciones unas de las siguientes opciones:
                     1.Crear Cliente
-                    2.Ver lista de Clientes
-                    3.Ingresar a Cliente
-                    4.Salir""");
+                    2.Ingresar a Cliente
+                    3.Salir""");
             op=sc.nextInt();
             switch (op) {
                 case 1 -> {
@@ -35,14 +34,7 @@ public class Menu {
                         System.out.println("se creo el cliente correctamente en la posicion N°"+(Cliente.getCantidadCliente()-1));
                     }
                 }
-                case 2 -> {
-                    if (Cliente.getCantidadCliente()>0){
-                        verLista();
-                    }else{
-                        System.out.println("no hay clientes");
-                    }
-                }
-                case 3 ->{
+                case 2 ->{
                     verLista();
                     System.out.println("Ingrese el cliente al que desea entrar");
                     clienteSeleccionado=sc.nextInt();
@@ -58,7 +50,7 @@ public class Menu {
                     }
 
                 }
-                case 4 -> {
+                case 3 -> {
                     System.out.println("El programa se cerrara");
                     validador = false;
                 }
@@ -91,23 +83,23 @@ public class Menu {
                     5.Salir""");
             op=sc.nextInt();
             switch (op) {
-                case 1 -> cliente.consultarMonto();
+                case 1 -> cliente.getDebito().consultarMonto();
                 case 2 -> {
                     System.out.println("Cuanto dinero desea ingresar?");
                     aux = sc.nextDouble();
-                    cliente.ingresarDinero(aux);
+                    cliente.getDebito().ingresarDinero(aux);
                 }
                 case 3 -> {
                     System.out.println("ingrese el cliente al que le desea enviar dinero");
                     verLista();
                     clienteEnviar = sc.nextInt();
                     if (clienteEnviar>0 && clienteEnviar<=listaClientes.size() && clienteEnviar!=clienteSeleccionado){
-                        cliente.enviarDinero(listaClientes.get(clienteEnviar));
+                        cliente.getDebito().enviarDinero(listaClientes.get(clienteEnviar).getDebito());
                     }else{
                         System.out.println("No existe el cliente ingresado , o intento enviarse dinero a si mismo");
                     }
                 }
-                case 4 -> cliente.retirarDinero();
+                case 4 -> cliente.getDebito().retirarDinero();
                 case 5 -> validador = false;
                 default -> System.out.println("no ingreso una opcion valida");
             }

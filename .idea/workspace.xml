@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6b873fe-2654-49a0-bfcb-1dc699f9d4ad" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/tarjeta/Tarjeta.java" afterDir="false" />
+    <list default="true" id="a6b873fe-2654-49a0-bfcb-1dc699f9d4ad" name="Changes" comment="Arreglo ingreso a clientes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/tarjeta/Debito.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laboratory/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/laboratory/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laboratory/Usuarios/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/Usuarios/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laboratory/tarjeta/Tarjeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/tarjeta/Tarjeta.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +26,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/laboratory/Usuarios/Cliente.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2QU9TMCQAU9xwN4zLhjyiwKjRCf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -60,12 +69,20 @@
       <option name="project" value="LOCAL" />
       <updated>1685646031700</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Arreglo ingreso a clientes">
+      <created>1685656185749</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685656185749</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Arreglo ingreso a clientes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arreglo ingreso a clientes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
