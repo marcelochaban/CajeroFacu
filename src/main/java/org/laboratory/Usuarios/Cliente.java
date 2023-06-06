@@ -56,11 +56,7 @@ public class Cliente extends Usuario {
             if (listaCBU.size()!=0){
                 for (int i=0 ; i<listaCBU.size();i++) {
                     auxString= Tarjeta.randomizarNumero();
-                    System.out.println(auxString);
                     validador=(auxString==listaCBU.get(i))?true:false;
-                    System.out.println(i);
-                    System.out.println(validador);
-                    System.out.println("no se buge");
                 }
             }else{
                 validador=false;

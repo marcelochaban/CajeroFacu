@@ -20,9 +20,7 @@ public class Debito extends Tarjeta{
         boolean validador=true;
         idTarjeta=cantidadTarjeta;
         cantidadTarjeta++;
-        System.out.println("ingreso al id tarjeta");
         do {
-            System.out.println("antes del random");
             numTarjeta=randomizarNumero();
             if (listaNumerosDebito.size()!=0){
                 for (int i=0 ; i<=listaNumerosDebito.size();) {

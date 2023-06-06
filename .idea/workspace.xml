@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6b873fe-2654-49a0-bfcb-1dc699f9d4ad" name="Changes" comment="Modificacion de Acceso a travez de tarjeta de debito&#10;Falta generar acceso por cbu y alias">
+    <list default="true" id="a6b873fe-2654-49a0-bfcb-1dc699f9d4ad" name="Changes" comment="Aplicación funcional">
+      <change afterPath="$PROJECT_DIR$/../../Practica_Spring/demo/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practica_Spring/marcelo/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practica_Spring/marcelo/src/main/resources/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laboratory/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/laboratory/Usuarios/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/Usuarios/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/laboratory/tarjeta/Debito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/tarjeta/Debito.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laboratory/tarjeta/Tarjeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboratory/tarjeta/Tarjeta.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,14 +82,38 @@
       <option name="project" value="LOCAL" />
       <updated>1685767238163</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Acceso por cbu y alias generado">
+      <created>1686017821364</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686017821364</updated>
+    </task>
+    <task id="LOCAL-00005" summary="agregar operacion saldo dolares y pesos">
+      <created>1686020412063</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686020412063</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Aplicación funcional">
+      <created>1686026398278</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686026398278</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update" />
     <MESSAGE value="Arreglo ingreso a clientes" />
     <MESSAGE value="Modificacion de Acceso a travez de tarjeta de debito&#10;Falta generar acceso por cbu y alias" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificacion de Acceso a travez de tarjeta de debito&#10;Falta generar acceso por cbu y alias" />
+    <MESSAGE value="Acceso por cbu y alias generado" />
+    <MESSAGE value="agregar operacion saldo dolares y pesos" />
+    <MESSAGE value="Aplicación funcional" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aplicación funcional" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -97,6 +121,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.util.InputMismatchException" package="java.util" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
