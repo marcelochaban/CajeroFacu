@@ -3,9 +3,6 @@ package org.laboratory.tarjeta;
 public abstract class Tarjeta {
 
     String numTarjeta;
-
-
-
     public static String randomizarNumero(){
         String num="";
         for (int i=0; i<=11;i++){

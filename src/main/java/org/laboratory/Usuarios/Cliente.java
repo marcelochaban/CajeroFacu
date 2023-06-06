@@ -51,17 +51,20 @@ public class Cliente extends Usuario {
         edad = diferenciaTiempo.getYears();
         idCliente=cantidadCliente;
         cantidadCliente++;
-        listaDebito.add(new Debito(listaClientes.get(idCliente)));
         do {
+            auxString= Tarjeta.randomizarNumero();
             if (listaCBU.size()!=0){
-                for (int i=0 ; i<=listaCBU.size();) {
-                    validador=auxString.equals(listaCBU.get(i))?false:true;
+                for (int i=0 ; i<listaCBU.size();i++) {
+                    auxString= Tarjeta.randomizarNumero();
+                    System.out.println(auxString);
+                    validador=(auxString==listaCBU.get(i))?true:false;
+                    System.out.println(i);
+                    System.out.println(validador);
+                    System.out.println("no se buge");
                 }
             }else{
-                auxString= Tarjeta.randomizarNumero();
                 validador=false;
             }
-            auxString= Tarjeta.randomizarNumero();
 
         } while (validador);
         listaCBU.add(auxString);
@@ -72,6 +75,20 @@ public class Cliente extends Usuario {
         super(nombre, apellido, dni, direccion, profesion);
         idCliente=cantidadCliente;
         cantidadCliente++;
+        do {
+            auxString= Tarjeta.randomizarNumero();
+            if (listaCBU.size()!=0){
+                for (int i=0 ; i<listaCBU.size();i++) {
+                    auxString= Tarjeta.randomizarNumero();
+                    validador=(auxString==listaCBU.get(i))?true:false;
+                }
+            }else{
+                validador=false;
+            }
 
+        } while (validador);
+        listaCBU.add(auxString);
+        listaAlias.add(""+getNombreCompleto()+getIdCliente());
+        listaAlias.get(idCliente).replace(" ",".");
     }
 }

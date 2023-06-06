@@ -1,6 +1,7 @@
 package org.laboratory;
 
 import org.laboratory.Usuarios.Cliente;
+import org.laboratory.tarjeta.Debito;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -23,11 +24,13 @@ public class Menu {
                     Selecciones unas de las siguientes opciones:
                     1.Crear Cliente
                     2.Ingresar a Cliente
-                    3.Salir""");
+                    3.Salir
+                    """);
             op=sc.nextInt();
             switch (op) {
                 case 1 -> {
                     listaClientes.add(new Cliente());
+                    Cliente.listaDebito.add(new Debito(listaClientes.get(Cliente.getCantidadCliente()-1)));
                     if (listaClientes.get(listaClientes.size()-1).getEdad()<18){
                         listaClientes.remove(listaClientes.size()-1);
                         System.out.println("el cliente ingresado era menor de edad");
@@ -50,7 +53,6 @@ public class Menu {
                     }else{
                         System.out.println("No existe el cliente ingresado");
                     }
-
                 }
                 case 3 -> {
                     System.out.println("El programa se cerrara");
@@ -122,6 +124,13 @@ public class Menu {
                 case 4 -> cliente.getDebito().retirarDinero(moneda);
                 case 5 -> validador = false;
                 default -> System.out.println("no ingreso una opcion valida");
+            }
+            System.out.println("desea seguir operando" +
+                    "\n1.Si" +
+                    "\n2.No");
+            op=sc.nextInt();
+            if (op == 2){
+                validador=false;
             }
         }
 

@@ -9,21 +9,20 @@ public class Debito extends Tarjeta{
 
     public static int cantidadTarjeta=0;
     private final int idTarjeta;
-
-
-
     String preFijoDeb="2222 ";
     private double saldoPesos;
     private double saldoUsd;
-    private int moneda;
     Scanner sc=new Scanner(System.in);
+    Cliente cliente;
     public static ArrayList<String> listaNumerosDebito=new ArrayList<>();
     public Debito(Cliente cliente){
-
+        this.cliente=cliente;
         boolean validador=true;
         idTarjeta=cantidadTarjeta;
         cantidadTarjeta++;
+        System.out.println("ingreso al id tarjeta");
         do {
+            System.out.println("antes del random");
             numTarjeta=randomizarNumero();
             if (listaNumerosDebito.size()!=0){
                 for (int i=0 ; i<=listaNumerosDebito.size();) {
@@ -33,7 +32,6 @@ public class Debito extends Tarjeta{
                 numTarjeta=preFijoDeb+numTarjeta;
                 validador=false;
             }
-
             } while (validador);
         numTarjeta=preFijoDeb+numTarjeta;
 
@@ -79,6 +77,7 @@ public class Debito extends Tarjeta{
         }
 
     }
+
 
     public void retirarDinero(int moneda){
         consultarMonto();
