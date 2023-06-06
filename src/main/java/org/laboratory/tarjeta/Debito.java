@@ -11,13 +11,15 @@ public class Debito extends Tarjeta{
     private final int idTarjeta;
 
 
-    
-    String preFijoDeb="2222 ";
-    private double saldo;
 
+    String preFijoDeb="2222 ";
+    private double saldoPesos;
+    private double saldoUsd;
+    private int moneda;
     Scanner sc=new Scanner(System.in);
     public static ArrayList<String> listaNumerosDebito=new ArrayList<>();
     public Debito(Cliente cliente){
+
         boolean validador=true;
         idTarjeta=cantidadTarjeta;
         cantidadTarjeta++;
@@ -38,31 +40,64 @@ public class Debito extends Tarjeta{
     }
 
     public void consultarMonto() {
-        System.out.println("El monto de su cuenta es:"+ saldo);
+        System.out.println("El monto de pesos de su cuenta es:"+ saldoPesos);
+        System.out.println("El monto de dolares de su cuenta es:"+ saldoUsd);
     }
 
-    public void ingresarDinero(double ingreso) {
-        saldo +=ingreso;
+    public void ingresarDinero(double ingreso,int moneda) {
+        switch (moneda){
+            case 0:
+                saldoPesos +=ingreso;
+            case 1:
+                saldoUsd +=ingreso;
+            default:
+                System.out.println("no ingreso una moneda valida");
+        }
+
     }
-    public void enviarDinero(Debito receptor){
+    public void enviarDinero(Debito receptor,int moneda){
         consultarMonto();
         System.out.println("ingrese el monto que quiere enviar");
         double envio=sc.nextDouble();
-        if (envio>0 && envio<= saldo) {
-            saldo -= envio;
-            receptor.ingresarDinero(envio);
-        }else{
-            System.out.println("Saldo insuficiente");
+        switch (moneda){
+            case 0:
+                if (envio>0 && envio<= saldoPesos) {
+                    saldoPesos -= envio;
+                    receptor.ingresarDinero(envio,0);
+                }else{
+                    System.out.println("Saldo insuficiente");
+                }
+            case 1:
+                if (envio>0 && envio<= saldoUsd) {
+                    saldoUsd -= envio;
+                    receptor.ingresarDinero(envio,1);
+                }else{
+                    System.out.println("Saldo insuficiente");
+                }
+            default:
+                System.out.println("no ingreso una moneda valida");
         }
+
     }
 
-    public void retirarDinero(){
+    public void retirarDinero(int moneda){
         consultarMonto();
         System.out.println("ingrese la cantidad que desea retirar");
         double retiro=sc.nextDouble();
-        if (retiro>0 && retiro<= saldo) {
-            saldo -= retiro;
-            consultarMonto();
+        switch (moneda){
+            case 0:
+                if (retiro>0 && retiro<= saldoPesos) {
+                    saldoPesos -= retiro;
+                    consultarMonto();
+                }
+            case 1:
+                if (retiro>0 && retiro<= saldoUsd) {
+                    saldoUsd -= retiro;
+                    consultarMonto();
+                }
+            default:
+                System.out.println("No ingreso una moneda valida");
         }
+
     }
 }

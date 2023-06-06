@@ -11,6 +11,7 @@ public class Menu {
     boolean validador=true;
     boolean validadorEnvio=true;
     int op;
+    int moneda;
     int clienteSeleccionado;
     String clienteEnviar;
     double aux;
@@ -76,6 +77,11 @@ public class Menu {
     public void menuCliente(Cliente cliente){
         while (validador){
             System.out.println("""
+                    ingrese la moneda con la que desea operar:
+                    0.Pesos 
+                    1:Dolares""");
+            moneda=sc.nextInt();
+            System.out.println("""
                     Selecciones unas de las siguientes opciones:
                     1.Consultar Saldo
                     2.Ingresar Dinero
@@ -88,7 +94,7 @@ public class Menu {
                 case 2 -> {
                     System.out.println("Cuanto dinero desea ingresar?");
                     aux = sc.nextDouble();
-                    cliente.getDebito().ingresarDinero(aux);
+                    cliente.getDebito().ingresarDinero(aux,moneda);
                 }
                 case 3 -> {
 
@@ -97,13 +103,13 @@ public class Menu {
                     while (validadorEnvio){
                         for (String alias : Cliente.listaAlias){
                             if (clienteEnviar.equals(alias)){
-                                cliente.getDebito().enviarDinero(listaClientes.get(Cliente.listaAlias.indexOf(clienteEnviar)).getDebito());
+                                cliente.getDebito().enviarDinero(listaClientes.get(Cliente.listaAlias.indexOf(clienteEnviar)).getDebito(),moneda);
                                 validadorEnvio=false;
                             }
                         }
                         for (String cbu : Cliente.listaCBU){
                             if (clienteEnviar.equals(cbu)){
-                                cliente.getDebito().enviarDinero(listaClientes.get(Cliente.listaAlias.indexOf(clienteEnviar)).getDebito());
+                                cliente.getDebito().enviarDinero(listaClientes.get(Cliente.listaAlias.indexOf(clienteEnviar)).getDebito(),moneda);
                                 validadorEnvio=false;
                             }
                         }
@@ -113,7 +119,7 @@ public class Menu {
                         break;
                     }
                 }
-                case 4 -> cliente.getDebito().retirarDinero();
+                case 4 -> cliente.getDebito().retirarDinero(moneda);
                 case 5 -> validador = false;
                 default -> System.out.println("no ingreso una opcion valida");
             }
