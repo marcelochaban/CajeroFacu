@@ -10,12 +10,11 @@ public class Debito extends Tarjeta{
     public static int cantidadTarjeta=0;
     private final int idTarjeta;
 
-    public static ArrayList<String> listaCBU=new ArrayList<>();
-    public static ArrayList<String> listaAlias=new ArrayList<>();
+
     
     String preFijoDeb="2222 ";
     private double saldo;
-    String auxString;
+
     Scanner sc=new Scanner(System.in);
     public static ArrayList<String> listaNumerosDebito=new ArrayList<>();
     public Debito(Cliente cliente){
@@ -24,29 +23,18 @@ public class Debito extends Tarjeta{
         cantidadTarjeta++;
         do {
             numTarjeta=randomizarNumero();
-            for (int i=0 ; i<=listaNumerosDebito.size();) {
-                validador=numTarjeta.equals(listaNumerosDebito.get(i))?false:true;
+            if (listaNumerosDebito.size()!=0){
+                for (int i=0 ; i<=listaNumerosDebito.size();) {
+                    validador=numTarjeta.equals(listaNumerosDebito.get(i))?false:true;
                 }
+            }else{
+                numTarjeta=preFijoDeb+numTarjeta;
+                validador=false;
+            }
+
             } while (validador);
         numTarjeta=preFijoDeb+numTarjeta;
-        do {
-            auxString=randomizarNumero();
-            for (int i=0 ; i<=listaCBU.size();) {
-                validador=auxString.equals(listaCBU.get(i))?false:true;
-            }
-        } while (validador);
-        listaCBU.add(auxString);
-        listaAlias.add(""+cliente.getNombreCompleto()+cliente.getIdCliente());
-        listaAlias.get(idTarjeta).replace(" ",".");
 
-    }
-
-    public String getListaCBU() {
-        return listaCBU.get(idTarjeta);
-    }
-
-    public  String getListaAlias() {
-        return listaAlias.get(idTarjeta);
     }
 
     public void consultarMonto() {

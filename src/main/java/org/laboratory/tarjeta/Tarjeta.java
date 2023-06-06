@@ -1,12 +1,12 @@
 package org.laboratory.tarjeta;
 
 public abstract class Tarjeta {
-    String num;
+
     String numTarjeta;
 
 
 
-    public String randomizarNumero(){
+    public static String randomizarNumero(){
         String num="";
         for (int i=0; i<=11;i++){
             int valorEntero = (int) (Math.floor(Math.random()*(9-0+1)+0));

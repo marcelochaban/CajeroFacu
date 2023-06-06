@@ -9,9 +9,10 @@ public class Menu {
 
     public static ArrayList<Cliente> listaClientes=new ArrayList<>();
     boolean validador=true;
+    boolean validadorEnvio=true;
     int op;
     int clienteSeleccionado;
-    int clienteEnviar;
+    String clienteEnviar;
     double aux;
     Scanner sc=new Scanner(System.in);
 
@@ -90,13 +91,26 @@ public class Menu {
                     cliente.getDebito().ingresarDinero(aux);
                 }
                 case 3 -> {
-                    System.out.println("ingrese el cliente al que le desea enviar dinero");
-                    verLista();
-                    clienteEnviar = sc.nextInt();
-                    if (clienteEnviar>0 && clienteEnviar<=listaClientes.size() && clienteEnviar!=clienteSeleccionado){
-                        cliente.getDebito().enviarDinero(listaClientes.get(clienteEnviar).getDebito());
-                    }else{
-                        System.out.println("No existe el cliente ingresado , o intento enviarse dinero a si mismo");
+
+                    System.out.println("ingrese el CBU o alias del cliente al que le desea enviar dinero");
+                    clienteEnviar = sc.next();
+                    while (validadorEnvio){
+                        for (String alias : Cliente.listaAlias){
+                            if (clienteEnviar.equals(alias)){
+                                cliente.getDebito().enviarDinero(listaClientes.get(Cliente.listaAlias.indexOf(clienteEnviar)).getDebito());
+                                validadorEnvio=false;
+                            }
+                        }
+                        for (String cbu : Cliente.listaCBU){
+                            if (clienteEnviar.equals(cbu)){
+                                cliente.getDebito().enviarDinero(listaClientes.get(Cliente.listaAlias.indexOf(clienteEnviar)).getDebito());
+                                validadorEnvio=false;
+                            }
+                        }
+                        if (validadorEnvio){
+                            System.out.println("No se encontro un cliente asociado a los datos ingresados");
+                        }
+                        break;
                     }
                 }
                 case 4 -> cliente.getDebito().retirarDinero();
